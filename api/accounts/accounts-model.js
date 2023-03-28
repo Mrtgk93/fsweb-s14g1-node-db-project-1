@@ -18,7 +18,7 @@ const getByName = (name) => {
 
 const create = async (account) => {
   const id = await db("accounts").insert(account);
-  return await getById(id);
+  return await getById(id[0]);
   // KODLAR BURAYA
 };
 
